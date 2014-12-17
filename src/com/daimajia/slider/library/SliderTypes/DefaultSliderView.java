@@ -13,12 +13,6 @@ import com.daimajia.slider.library.R;
  * just extend BaseSliderView, and implement getView() method.
  */
 public class DefaultSliderView extends BaseSliderView{
-
-    /**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-
 	public DefaultSliderView(Context context) {
         super(context);
     }
