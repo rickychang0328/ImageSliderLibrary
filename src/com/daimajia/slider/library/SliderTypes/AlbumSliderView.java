@@ -1,12 +1,11 @@
 package com.daimajia.slider.library.SliderTypes;
 
-import com.daimajia.slider.library.R;
-import com.squareup.picasso.Picasso;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
+
+import com.daimajia.slider.library.R;
 /**
  * 播放頁-專輯圖滑動用view
  * */
