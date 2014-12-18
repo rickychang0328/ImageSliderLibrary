@@ -1,9 +1,9 @@
 package com.daimajia.slider.library.SliderTypes;
 
 import java.io.File;
-import java.io.Serializable;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -12,6 +12,7 @@ import com.daimajia.slider.library.R;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.RequestCreator;
+import com.squareup.picasso.Transformation;
 
 /**
  * When you want to make your own slider view, you must extends from this class.
@@ -246,7 +247,20 @@ public abstract class BaseSliderView{
                 rq.fit().centerInside();
                 break;
         }
-
+//        rq.transform(new  Transformation() {
+//      	  @Override public Bitmap transform(Bitmap source) {
+//  		    int size = Math.min(source.getWidth(), source.getHeight());
+//  		    int x = (source.getWidth() - size) / 2;
+//  		    int y = (source.getHeight() - size) / 2;
+//  		    Bitmap result = Bitmap.createBitmap(source, x, y, size, size);
+//  		    if (result != source) {
+//  		      source.recycle();
+//  		    }
+//  		    return result;
+//  		  }
+//
+//  		  @Override public String key() { return "square()"; }
+//  		});
         rq.into(targetImageView,new Callback() {
             @Override
             public void onSuccess() {
